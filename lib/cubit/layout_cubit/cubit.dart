@@ -102,6 +102,7 @@ class ShopCubit extends Cubit<ShopStats> {
 
   FavVm? favModel;
   void getFavData(){
+
     emit(LoadingGatFavErrorStat());
 
     DioHelper.getData(url: 'favorites',token: token).then((value) {
